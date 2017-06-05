@@ -4,11 +4,9 @@ class BoggleBoard {
     this.arr = [];
   }
 
-  shake(size, size2=4){
-    for (var i = 0; i < size; i++) {
-      this.arr.push([]);
-    }
+  shake(size, size2){
     for (var j = 0; j < size; j++) {
+      this.arr.push([]);
       for (var k = 0; k < size2; k++) {
         let index = Math.floor(Math.random() * this.alphabet.length);
         this.arr[j].push(this.alphabet[index]);
@@ -19,4 +17,4 @@ class BoggleBoard {
 }
 
 var boggle = new BoggleBoard();
-console.log(boggle.shake(4));
+console.log(boggle.shake(7,2));
